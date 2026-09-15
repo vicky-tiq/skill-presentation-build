@@ -121,12 +121,36 @@ thông điệp không?**
 
 ## Cài đặt
 
-```bash
+Hai lệnh trong Claude Code:
+
+```
 /plugin marketplace add vicky-tiq/skill-presentation-build
-/plugin install presentation-build
+/plugin install presentation-build@skill-presentation-build
 ```
 
-Hoặc copy thư mục `skills/presentation-build/` vào `~/.claude/skills/`.
+Hoặc chạy trong terminal:
+
+```bash
+claude plugin marketplace add vicky-tiq/skill-presentation-build
+claude plugin install presentation-build@skill-presentation-build
+```
+
+Khởi động lại session để skill được nạp. `claude plugin list` để kiểm tra, còn
+`claude plugin details presentation-build@skill-presentation-build` cho biết nó tốn bao
+nhiêu: **một skill, ~310 token thường trực, ~2.5k khi thực sự chạy.**
+
+Cập nhật sau này: `claude plugin update presentation-build@skill-presentation-build`.
+Gỡ: `claude plugin uninstall presentation-build@skill-presentation-build`.
+
+**Không dùng plugin** — copy thẳng thư mục skill:
+
+```bash
+git clone https://github.com/vicky-tiq/skill-presentation-build.git
+cp -r skill-presentation-build/skills/presentation-build ~/.claude/skills/
+```
+
+Để ở `~/.claude/skills/` là chỉ mình bạn dùng trên máy này; để ở `.claude/skills/` trong
+repo dự án thì ai clone repo đó cũng có.
 
 ---
 

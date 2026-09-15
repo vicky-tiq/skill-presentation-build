@@ -122,12 +122,36 @@ recoverable from the conclusion alone?**
 
 ## Install
 
-```bash
+Two commands in Claude Code:
+
+```
 /plugin marketplace add vicky-tiq/skill-presentation-build
-/plugin install presentation-build
+/plugin install presentation-build@skill-presentation-build
 ```
 
-Or drop `skills/presentation-build/` into `~/.claude/skills/`.
+Or from a terminal:
+
+```bash
+claude plugin marketplace add vicky-tiq/skill-presentation-build
+claude plugin install presentation-build@skill-presentation-build
+```
+
+Restart the session afterwards so the skill loads. `claude plugin list` confirms it, and
+`claude plugin details presentation-build@skill-presentation-build` shows what it costs:
+**one skill, ~310 tokens always-on, ~2.5k when it actually fires.**
+
+Updating later: `claude plugin update presentation-build@skill-presentation-build`.
+Removing: `claude plugin uninstall presentation-build@skill-presentation-build`.
+
+**Without the plugin system** — copy the skill folder straight in:
+
+```bash
+git clone https://github.com/vicky-tiq/skill-presentation-build.git
+cp -r skill-presentation-build/skills/presentation-build ~/.claude/skills/
+```
+
+Use `~/.claude/skills/` for yourself on this machine, or `.claude/skills/` inside a project
+repo to give it to everyone who clones that repo.
 
 ---
 
