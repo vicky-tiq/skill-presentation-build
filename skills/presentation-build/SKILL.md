@@ -1,6 +1,6 @@
 ---
 name: presentation-build
-description: Prepare presentation content and slides that an audience can actually follow and remember — structure first, slides second. Runs a three-question brief (goal / audience and what they already know / the one thing they must remember), builds a section map where every section carries one point, its evidence, its so-what and a written transition sentence, budgets minutes against section count, then produces a full speaker script and builds the deck in whichever channel is wanted (Gamma, .pptx, HTML Artifact, Canva or Adobe Express). Use for any talk or deck — pitch, workshop, training, webinar, demo, keynote, conference session, investor or client presentation, internal update, team readout — and for rewriting an existing deck that has too many words on it. Triggers on "presentation", "slides", "deck", "slide deck", "pitch deck", "talk", "workshop", "webinar", "training", "keynote", "speech", "present to", "prepare slides", "outline my talk", "speaker notes", "rehearse", "làm slide", "bài thuyết trình", "chuẩn bị bài nói", "dàn ý bài trình bày", "kịch bản thuyết trình", "bài giảng", "buổi chia sẻ", "trình bày cho khách".
+description: Prepare presentation content and slides that an audience can actually follow and remember — structure first, slides second. Runs a three-question brief (goal / audience and what they already know / the one thing they must remember), builds a section map where every section carries one point, its evidence, its so-what and a written transition sentence, budgets minutes against section count, then produces a full speaker script and builds the deck in whichever channel is wanted (Gamma, .pptx, Google Slides, Figma Slides, an HTML Artifact, Canva or Adobe Express). Use for any talk or deck — pitch, workshop, training, webinar, demo, keynote, conference session, investor or client presentation, internal update, team readout — and for rewriting an existing deck that has too many words on it. Triggers on "presentation", "slides", "deck", "slide deck", "pitch deck", "google slides", "figma slides", "talk", "workshop", "webinar", "training", "keynote", "speech", "present to", "prepare slides", "outline my talk", "speaker notes", "rehearse", "làm slide", "bài thuyết trình", "chuẩn bị bài nói", "dàn ý bài trình bày", "kịch bản thuyết trình", "bài giảng", "buổi chia sẻ", "trình bày cho khách".
 ---
 
 # Presentation build
@@ -106,16 +106,24 @@ Slides support the spoken words; they do not replace them. Anything that must be
 - Apply the user's brand via the `brand-context` skill. Never invent colours or fonts.
 - Any chart follows the `dataviz` skill.
 
-**Choosing the output channel** — all four are in use; pick by what happens to the deck next. Full mechanics for each in `references/slide-channels.md`.
+**Choosing the output channel** — pick by what happens to the deck *next*, not by what is quickest to generate. Full mechanics for each in `references/slide-channels.md`.
 
 | Channel | Pick it when |
 |---|---|
-| **Gamma** | Fastest path to a good-looking deck; the user will keep editing it online or share a link |
+| **Native slides MCP** | A themed deck is wanted immediately and nothing downstream needs a specific file format |
+| **Gamma** | Fastest good-looking deck; the user will keep editing it online or share a link |
 | **.pptx** | It must open in PowerPoint or Keynote, be emailed, or be handed to a client or an event organiser |
-| **HTML Artifact** | Layout control matters, or the deck should live at a shareable URL and be presented from a browser |
-| **Canva / Adobe Express** | A designer or the marketing team will take it further in the tool they already work in |
+| **Google Slides** | The team lives in Workspace and will co-edit or comment before the talk |
+| **Figma Slides** | The deck is a design artefact; designers will own it after handover |
+| **Canva / Adobe Express** | Marketing will take it further in the tool they already work in |
+| **HTML Artifact** | Layout control matters, or it needs a stable shareable URL presented from a browser |
 
-Ask which one if it is not obvious. Build the deck from the section map — **one slide per idea inside a section, never one slide per section.**
+Ask which one if it is not obvious. Two traps worth knowing before promising anything:
+**Google Slides has no content API here** — the deck is built as .pptx and converted on
+upload — and **Figma needs a Full seat on the right plan**, under the right account.
+
+**Sharing the finished deck with other people is a separate step the user approves** — a
+Drive permission, a Figma invite, a published link. Build it, then ask. Build the deck from the section map — **one slide per idea inside a section, never one slide per section.**
 
 ---
 

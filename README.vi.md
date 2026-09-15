@@ -96,12 +96,21 @@ nhiên phá vỡ nó, nhưng cỡ chữ thì không bao giờ nhân nhượng.
 
 Dựng vào đúng kênh mà bộ slide sẽ sống:
 
-| Kênh | Chọn khi |
-|---|---|
-| **Gamma** | Nhanh nhất để có deck đẹp; còn sửa tiếp online |
-| **.pptx** | Phải mở được bằng PowerPoint/Keynote, gửi mail, giao cho ban tổ chức |
-| **HTML Artifact** | Cần kiểm soát layout, hoặc cần một link chia sẻ cố định |
-| **Canva / Adobe Express** | Designer sẽ làm tiếp trong công cụ của họ |
+| Kênh | Chọn khi | Ra sản phẩm gì |
+|---|---|---|
+| **Slides MCP có sẵn** | Muốn có deck đẹp ngay, không cần định dạng file cụ thể | Deck online + speaker notes |
+| **Gamma** | Nhanh nhất để có deck đẹp; còn sửa tiếp online | Link Gamma |
+| **.pptx** | Phải mở bằng PowerPoint/Keynote, gửi mail, giao ban tổ chức | Một file |
+| **Google Slides** | Team dùng Workspace, nhiều người cùng sửa hoặc comment | Link Drive |
+| **Figma Slides** | Deck là sản phẩm thiết kế; designer sẽ tiếp quản | File Figma |
+| **Canva / Adobe Express** | Marketing sẽ làm tiếp trong công cụ của họ | Bản thiết kế sửa được |
+| **HTML Artifact** | Cần kiểm soát layout, hoặc cần link chia sẻ cố định | Một trang web |
+
+Phần của mỗi kênh ghi rõ những cái bẫy có thật: Google Slides **không có API nội dung** nên
+deck phải dựng bằng .pptx rồi để Drive tự chuyển đổi khi upload; Figma Slides đòi **ghế
+Full** trên đúng plan và đúng tài khoản; slides MCP sẽ **thêm slide trùng** nếu sửa mà quên
+`force_edit`. Còn việc chia sẻ deck cho người khác — cấp quyền Drive, mời vào Figma, publish
+link — luôn là một bước riêng do bạn duyệt.
 
 ### 6. Checklist trước khi giao
 

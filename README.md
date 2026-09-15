@@ -97,12 +97,21 @@ the type size never bends.
 
 Built into whichever channel the deck needs to live in:
 
-| Channel | Pick it when |
-|---|---|
-| **Gamma** | Fastest path to a good-looking deck; will keep being edited online |
-| **.pptx** | Must open in PowerPoint or Keynote, be emailed, handed to an organiser |
-| **HTML Artifact** | Layout control matters, or it should live at a shareable URL |
-| **Canva / Adobe Express** | A designer will take it further in their own tool |
+| Channel | Pick it when | Lands as |
+|---|---|---|
+| **Native slides MCP** | A themed deck is wanted immediately | A hosted deck + speaker notes |
+| **Gamma** | Fastest good-looking deck; will keep being edited online | A Gamma link |
+| **.pptx** | Must open in PowerPoint/Keynote, be emailed, handed to an organiser | A file |
+| **Google Slides** | The team lives in Workspace and will co-edit or comment | A Drive link |
+| **Figma Slides** | The deck is a design artefact; designers will own it | A Figma file |
+| **Canva / Adobe Express** | Marketing will take it further in their own tool | An editable design |
+| **HTML Artifact** | Layout control matters, or it needs a stable shareable URL | A web page |
+
+Each channel's section covers the traps that actually bite: Google Slides has no content
+API, so the deck is built as **.pptx and converted on upload**; Figma Slides needs a **Full
+seat** on the right plan under the right account; the native MCP appends duplicate slides
+if you edit without `force_edit`. And sharing the finished deck — a Drive permission, a
+Figma invite, a published link — is always a separate step the user approves.
 
 ### 6. A pre-delivery checklist
 
