@@ -160,3 +160,15 @@ count, transitions written rather than improvised, and a checklist that has to p
 delivery.
 
 MIT licensed.
+
+---
+
+## Contributing / editing
+
+```bash
+git clone https://github.com/vicky-tiq/skill-presentation-build.git
+ln -s "$PWD/skill-presentation-build/skills/presentation-build" ~/.claude/skills/presentation-build
+```
+
+Claude Code reads the skill through the symlink, so an edit in the repo is live
+immediately — no copy step, nothing to forget to sync.
