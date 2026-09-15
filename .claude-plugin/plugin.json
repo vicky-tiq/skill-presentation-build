@@ -1,0 +1,13 @@
+{
+  "name": "presentation-build",
+  "version": "1.0.0",
+  "description": "Prepare presentation content and slides that an audience can follow and remember — structure first, slides second. A three-question brief, a section map where every section carries one point, its evidence, its so-what and a written transition, a time budget that caps section count, a full speaker script, then the deck built in Gamma, .pptx, an HTML Artifact, or Canva / Adobe Express.",
+  "author": {
+    "name": "Vicky Huynh",
+    "url": "https://github.com/vicky-tiq"
+  },
+  "repository": "https://github.com/vicky-tiq/skill-presentation-build",
+  "license": "MIT",
+  "keywords": ["presentation", "slides", "deck", "public-speaking", "storytelling", "speaker-notes", "workshop", "pitch-deck", "gamma", "pptx", "bilingual", "vietnamese"],
+  "skills": "./skills/"
+}

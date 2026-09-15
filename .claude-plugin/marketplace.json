@@ -1,0 +1,15 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "skill-presentation-build",
+  "description": "A Claude Code skill that builds the structure of a talk before the slides: brief, section map, speaker script, then the deck in whichever tool you present from.",
+  "owner": {
+    "name": "Vicky Huynh",
+    "url": "https://github.com/vicky-tiq"
+  },
+  "plugins": [
+    {
+      "name": "presentation-build",
+      "source": "./"
+    }
+  ]
+}
