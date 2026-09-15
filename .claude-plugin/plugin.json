@@ -1,6 +1,6 @@
 {
   "name": "presentation-build",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Prepare presentation content and slides that an audience can follow and remember — structure first, slides second. A three-question brief, a section map where every section carries one point, its evidence, its so-what and a written transition, a time budget that caps section count, a full speaker script, then the deck built in the native slides MCP, Gamma, .pptx, Google Slides, Figma Slides, an HTML Artifact, or Canva / Adobe Express.",
   "author": {
     "name": "Vicky Huynh",

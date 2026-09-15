@@ -20,7 +20,7 @@ Pick by what happens to the deck *after* the talk, not by what is quickest to ge
 | **Figma Slides** | The deck is a design artefact; designers will own it | A Figma file |
 | **Canva / Adobe Express** | Marketing will take it further in their own tool | An editable design |
 | **HTML Artifact** | Layout control matters, or it needs a stable shareable URL | A web page |
-| **Lark Slides** | — **not possible**, no API. See the Lark section for what to do instead | — |
+| **Lark Slides** | No API — build the .pptx, user imports it by hand. See the Lark section | A .pptx + steps |
 
 ---
 
@@ -134,27 +134,48 @@ that, or build the .pptx instead.
 
 ---
 
-## Lark — not a slide channel
+## Lark — no API, but a real manual path
 
-**You cannot build a Lark Slides deck from here.** Do not offer it. Checked 2026-09-15:
+**You cannot build a Lark Slides deck programmatically.** Do not offer it as an automated
+channel. Verified 2026-09-15:
 
 - The connected Lark MCP covers **Bitable, Contacts, Docx, IM and Wiki only** — no slides
-  tool, and no Drive upload tool, so the "build a .pptx and convert it" trick that works for
-  Google Slides has no entry point either.
-- Lark's own open API has no Slides namespace, and the Drive file-type list recognises
+  tool, and no Drive upload tool, so the "build a .pptx and convert it on upload" trick that
+  works for Google Slides has no entry point.
+- Lark's open API has no Slides namespace, and the Drive file-type list recognises
   `doc`, `sheet`, `mindnote`, `bitable`, `file`, `docx`, `folder` and `shortcut` —
   **`slides` is not a type the API knows about.**
 
-Lark Slides exists as a product; it is just not reachable programmatically. If the user
-wants one, the deck has to be made by hand in Lark, or built in another channel and shared
-into Lark.
+### The manual path that does work
 
-**What Lark *is* good for in this skill** — two things worth offering instead:
+Lark Slides imports PowerPoint. So **build the .pptx with the `pptx` skill, hand the user
+the file, and give them these steps** — verified against the Lark help centre, 2026-09-15:
+
+**From a local .pptx:** open any Lark document → hover the **+** icon in the upper-right
+corner → **Upload or Import** → **Import as Docs** → choose the import format
+**Microsoft PowerPoint**.
+
+**From a .pptx already in Lark Drive:** open the PPTX → hover the **···** icon in the
+upper-right corner → **Import as Slides**.
+
+Limits that will bite:
+
+- Maximum import size **600 MB**.
+- **Files in Wiki or My Document Library cannot be converted.** Move the file to **Drive**
+  first. Worth saying up front — this team keeps a lot in Wiki.
+- Import fidelity is **not documented**. Assume fonts, animations and embedded objects can
+  shift, and tell the user to open the imported deck and look at it before presenting. Keep
+  the .pptx as the master.
+- Going the other way (Lark Slides → export), **charts, boards, comments and video covers
+  cannot be exported.** So a deck that gets rebuilt inside Lark Slides with native charts
+  will not round-trip cleanly back to a file.
+
+### What Lark *is* good for in this skill
 
 1. **The script and section map as a Lark Doc.** `docx_v1_document_create` then
    `docx_v1_documentBlock_batchUpdate`. For an internal Lark team this is often the more
    useful half of the output: the section map is a table people can comment on, and the
-   speaker script is a document the presenter rehearses from. Build the deck elsewhere.
+   speaker script is a document the presenter rehearses from.
 2. **Announcing the finished deck in the Lark group.** `im_v1_message_create` posts the
    link (Gamma, Drive, Figma, Artifact) into the chat where the audience already is.
    Posting a message is **sending on the user's behalf** — confirm the chat and the wording
