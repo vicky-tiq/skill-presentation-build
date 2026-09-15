@@ -20,6 +20,7 @@ Pick by what happens to the deck *after* the talk, not by what is quickest to ge
 | **Figma Slides** | The deck is a design artefact; designers will own it | A Figma file |
 | **Canva / Adobe Express** | Marketing will take it further in their own tool | An editable design |
 | **HTML Artifact** | Layout control matters, or it needs a stable shareable URL | A web page |
+| **Lark Slides** | — **not possible**, no API. See the Lark section for what to do instead | — |
 
 ---
 
@@ -130,6 +131,34 @@ system already in Figma, or designers will own it after you hand it over.
 Strongest when the deck must look designed and stay editable by designers. Weakest when the
 presenter needs to run it offline or hand a file to an event organiser — export to PDF for
 that, or build the .pptx instead.
+
+---
+
+## Lark — not a slide channel
+
+**You cannot build a Lark Slides deck from here.** Do not offer it. Checked 2026-09-15:
+
+- The connected Lark MCP covers **Bitable, Contacts, Docx, IM and Wiki only** — no slides
+  tool, and no Drive upload tool, so the "build a .pptx and convert it" trick that works for
+  Google Slides has no entry point either.
+- Lark's own open API has no Slides namespace, and the Drive file-type list recognises
+  `doc`, `sheet`, `mindnote`, `bitable`, `file`, `docx`, `folder` and `shortcut` —
+  **`slides` is not a type the API knows about.**
+
+Lark Slides exists as a product; it is just not reachable programmatically. If the user
+wants one, the deck has to be made by hand in Lark, or built in another channel and shared
+into Lark.
+
+**What Lark *is* good for in this skill** — two things worth offering instead:
+
+1. **The script and section map as a Lark Doc.** `docx_v1_document_create` then
+   `docx_v1_documentBlock_batchUpdate`. For an internal Lark team this is often the more
+   useful half of the output: the section map is a table people can comment on, and the
+   speaker script is a document the presenter rehearses from. Build the deck elsewhere.
+2. **Announcing the finished deck in the Lark group.** `im_v1_message_create` posts the
+   link (Gamma, Drive, Figma, Artifact) into the chat where the audience already is.
+   Posting a message is **sending on the user's behalf** — confirm the chat and the wording
+   with them first, every time.
 
 ---
 
