@@ -155,6 +155,31 @@ repo to give it to everyone who clones that repo.
 
 ---
 
+## No Claude Code? Upload it to claude.ai instead
+
+Skills work in the Claude app too. On **Free, Pro, Max, Team and Enterprise** plans, with
+**code execution enabled** in Settings:
+
+1. Download **`presentation-build.zip`** from the
+   [latest release](https://github.com/vicky-tiq/skill-presentation-build/releases/latest).
+2. In claude.ai go to **Customize → Skills**, click **Add**, and select the zip.
+
+The zip is packaged the way the uploader requires — the `presentation-build/` folder is the
+root of the archive, with `SKILL.md` inside it.
+
+Two things to know before rolling this out to a team:
+
+- **Skills do not sync across surfaces.** A skill uploaded to claude.ai is not available in
+  Claude Code or through the API, and vice versa. Each surface is uploaded separately.
+- **On claude.ai a skill is per-user.** There is no org-wide distribution and admins cannot
+  manage it centrally — every person uploads their own copy of the zip.
+
+**Neither of those?** SKILL.md is plain markdown. Paste it at the top of a conversation with
+any assistant and it works as an instruction set — you lose automatic triggering and the
+`references/` files load on demand, but the method still applies.
+
+---
+
 ## Use
 
 It triggers on its own for anything deck-shaped. Or call it directly:

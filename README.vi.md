@@ -154,6 +154,31 @@ repo dự án thì ai clone repo đó cũng có.
 
 ---
 
+## Chưa có Claude Code? Upload lên claude.ai
+
+Skill dùng được trong app Claude. Áp dụng cho gói **Free, Pro, Max, Team và Enterprise**, với
+điều kiện đã bật **code execution** trong Settings:
+
+1. Tải **`presentation-build.zip`** ở
+   [bản phát hành mới nhất](https://github.com/vicky-tiq/skill-presentation-build/releases/latest).
+2. Trên claude.ai vào **Customize → Skills**, bấm **Add**, chọn file zip.
+
+File zip đã đóng đúng chuẩn — thư mục `presentation-build/` là gốc của archive, `SKILL.md`
+nằm bên trong.
+
+Hai điều cần biết trước khi triển khai cho cả team:
+
+- **Skill không đồng bộ giữa các nền tảng.** Upload lên claude.ai thì Claude Code và API
+  không thấy, và ngược lại. Mỗi nơi phải nạp riêng.
+- **Trên claude.ai skill là của từng người.** Không có cách phát cho cả tổ chức, admin cũng
+  không quản lý tập trung được — mỗi người tự upload bản zip của mình.
+
+**Không có cả hai?** SKILL.md là markdown thuần. Dán nó vào đầu cuộc trò chuyện với bất kỳ
+trợ lý nào là dùng được như một bộ hướng dẫn — mất phần tự kích hoạt và các file
+`references/` phải đưa thêm khi cần, nhưng phương pháp thì vẫn nguyên.
+
+---
+
 ## Dùng
 
 Skill tự kích hoạt với mọi yêu cầu có hình dạng "bài trình bày". Hoặc gọi thẳng:
